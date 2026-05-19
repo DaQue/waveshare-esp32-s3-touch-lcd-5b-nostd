@@ -1,0 +1,15 @@
+[workspace]
+members  = ["crates/weather-s3"]
+resolver = "2"
+
+[profile.dev.package.esp-radio]
+opt-level = 3
+
+[profile.dev]
+opt-level = "s"
+
+[profile.release]
+codegen-units = 1
+debug         = 2
+lto           = "fat"
+opt-level     = "s"
